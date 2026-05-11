@@ -1,0 +1,45 @@
+﻿@model StudentRegister_BTT3.Models.Student
+
+<div class="container mt-5">
+
+    <div class="card shadow p-5 text-center">
+
+        <h1 class="text-success mb-4">
+            ĐĂNG KÝ THÀNH CÔNG
+        </h1>
+
+        <h4>
+            Cảm ơn bạn
+            <span class="text-primary">
+                @Model.MSSV - @Model.HoTen
+            </span>
+        </h4>
+
+        <p class="mt-3 fs-5">
+            Đã đăng ký chuyên ngành
+            <b class="text-danger">
+                @Model.ChuyenNganh
+            </b>
+        </p>
+
+        <div class="alert alert-info mt-4">
+
+            Số lượng sinh viên đăng ký cùng ngành:
+
+            <b>
+                @ViewBag.SoLuong
+            </b>
+
+        </div>
+
+        <a asp-controller="Student"
+           asp-action="Index"
+           class="btn btn-primary mt-3">
+
+            Quay lại đăng ký
+
+        </a>
+
+    </div>
+
+</div>
